@@ -1,6 +1,6 @@
 from discord.ext import commands
 from discord import app_commands
-from cogs.init.presets import colors
+from config.presets import colors
 import discord
 import time
 import os

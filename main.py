@@ -1,4 +1,4 @@
-from cogs.init.index import Bot
+from config.index import Bot
 from dotenv import load_dotenv
 import os
 
