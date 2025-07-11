@@ -1,4 +1,5 @@
 from discord.ext import commands
+from discord import app_commands
 import discord
 import traceback
 import os
@@ -13,6 +14,8 @@ class Bot(commands.Bot):
         self.cogs_path = os.getenv("COGS_FOLDER")
         
     async def load_cogs(self):
+        self.load_extension(f'{self.cogs_path}.init.errors')
+        
         for folder in os.listdir(self.cogs_path):
             if folder != "__pycache__" and folder != "init":
                 for cog in os.listdir(os.path.join(self.cogs_path, folder)):
