@@ -27,7 +27,7 @@ class Bot(commands.Bot):
                             traceback.print_exc()
                             
     async def on_ready(self):
-        print(f'\033[34m{self.user} is now up! Latency: {self.latency*1000:.0f}ms\033[0m')
+        print(f'\n\033[34m{self.user} is now up! Latency: {self.latency*1000:.0f}ms\033[0m')
         
         await self.load_cogs()
         if False: # Enable activity
