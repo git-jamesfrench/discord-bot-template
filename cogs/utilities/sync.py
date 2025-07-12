@@ -3,7 +3,7 @@ import traceback
 import discord
 
 class Cog(commands.Cog):
-    def __init__(self, bot: discord.Client):
+    def __init__(self, bot: commands.Bot):
         self.bot = bot
         
     @commands.command("sync")
